@@ -34,3 +34,21 @@ echo -e "\033[1;33mINSTAL POPSICLE\033[0m"
 flatpak install flathub com.system76.Popsicle -y
 echo -e "\033[1;32mPOPSICLE INSTALADO\033[0m"
 
+echo -e "\033[1;33minstall yarn\033[0m"
+npm install --global yarn
+echo -e "\033[1;32mYARN INSTALADO\033[0m"
+
+echo -e "\033[1;33minstall apache netbens \033[0m"
+sudo snap install netbeans --classic
+echo -e "\033[1;32apachenetbens INSTALADO\033[0m"
+
+echo -e "\033[1;33minstall mysql-workbench-community \033[0m"
+sudo snap install mysql-workbench-community
+echo -e "\033[1;32mysql-workbench-community INSTALADO\033[0m"
+
+echo -e "\033[1;33mdocker pull dockurr/samba \033[0m"
+docker pull dockurr/samba
+echo -e "\033[1;32docker pull dockurr/samba INSTALADO\033[0m"
+
+docker run -d -p 445:445 -e "USER=pett" -e "PASS=pett" -v "/home/samba:/storage" dockurr/samba
+
